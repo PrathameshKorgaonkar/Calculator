@@ -1,42 +1,42 @@
-def add(x, y):
-    return x + y
+def add(num1, num2):
+    return num1 + num2
+ 
+def subtract(num1, num2):
+    return num1 - num2
+ 
+def multiply(num1, num2):
+    return num1 * num2
 
-
-def subtract(x, y):
-    return x - y
-
-
-def multiply(x, y):
-    return x * y
-
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-
-while True:
-
-    choice = input("Enter choice(1/2/3): ")
-
-    if choice in ('1', '2', '3'):
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
-
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-          break
+def perform_operation(num1, num2, choice):
+    if choice == '1':
+        return add(num1, num2)
+    elif choice == '2':
+        return subtract(num1, num2)
+    elif choice == '3':
+        return multiply(num1, num2)
     else:
-        print("Invalid Input")
+        raise ValueError("Invalid choice")
+ 
+def main():
+    try:
+        print("Welcome to Calculator App!")
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        
+        print("Select operation:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        
+        choice = input("Enter choice (1/2/3): ")
+        
+        result = perform_operation(num1, num2, choice)
+        print("Result:", result)
+        
+    except ValueError as e:
+        print("Error:", e)
+    except EOFError:
+        print("\nInput was terminated unexpectedly. Please provide valid input.")
+ 
+if __name__ == "__main__":
+    main()
