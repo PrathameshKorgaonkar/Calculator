@@ -55,7 +55,7 @@ class TestDivision(unittest.TestCase):
  
     def test_divide_by_negative(self):
         self.assertEqual(divide(10, -2), -5)
-        self.assertAlmostEqual(divide(8, 4), -2)
+        self.assertAlmostEqual(divide(8, -4), -2)
  
 if __name__ == '__main__':
     unittest.main()
