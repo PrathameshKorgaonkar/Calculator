@@ -43,7 +43,7 @@ class TestMultiplication(unittest.TestCase):
 class TestDivision(unittest.TestCase):
     def test_integer_division(self):
         self.assertEqual(divide(6, 3), 2)
-        self.assertEqual(divide(10, 2), 20)
+        self.assertEqual(divide(10, 2), 5)
     
     def test_float_division(self):
         self.assertEqual(divide(5, 2), 2.5)
@@ -54,7 +54,7 @@ class TestDivision(unittest.TestCase):
             divide(1, 0)
  
     def test_divide_by_negative(self):
-        self.assertEqual(divide(10, -2), 5)
+        self.assertEqual(divide(10, -2), -5)
         self.assertAlmostEqual(divide(8, -4), -2)
  
 if __name__ == '__main__':
