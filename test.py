@@ -24,7 +24,7 @@ class TestSubtraction(unittest.TestCase):
         self.assertEqual(subtract(-10, -20), 10)
 
     def test_mixed_numbers(self):
-        self.assertEqual(subtract(5, -3), 2)
+        self.assertEqual(subtract(5, -3), 8)
         self.assertEqual(subtract(-10, 5), -15)
     
 class TestMultiplication(unittest.TestCase):

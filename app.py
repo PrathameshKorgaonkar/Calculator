@@ -6,7 +6,12 @@ def subtract(num1, num2):
  
 def multiply(num1, num2):
     return num1 * num2
-
+ 
+def divide(num1, num2):
+    if num2 == 0:
+        raise ValueError("Cannot divide by zero")
+    return num1 / num2
+ 
 def perform_operation(num1, num2, choice):
     if choice == '1':
         return add(num1, num2)
@@ -14,6 +19,8 @@ def perform_operation(num1, num2, choice):
         return subtract(num1, num2)
     elif choice == '3':
         return multiply(num1, num2)
+    elif choice == '4':
+        return divide(num1, num2)
     else:
         raise ValueError("Invalid choice")
  
@@ -27,8 +34,9 @@ def main():
         print("1. Addition")
         print("2. Subtraction")
         print("3. Multiplication")
+        print("4. Division")
         
-        choice = input("Enter choice (1/2/3): ")
+        choice = input("Enter choice (1/2/3/4): ")
         
         result = perform_operation(num1, num2, choice)
         print("Result:", result)
