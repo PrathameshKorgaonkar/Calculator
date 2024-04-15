@@ -7,7 +7,7 @@ class TestAddition(unittest.TestCase):
         self.assertEqual(add(10, 20), 30)
      
     def test_positie_numbers(self):
-        self.assertEqual(add(6, 02), 8)
+        self.assertEqual(add(6, 2), 8)
     
     def test_negative_numbers(self):
         self.assertEqual(add(-1, -2), -3)
