@@ -5,6 +5,7 @@ class TestAddition(unittest.TestCase):
     def test_positive_numbers(self):
         self.assertEqual(add(1, 2), 3)
         self.assertEqual(add(10, 20), 30)
+        self.assertEqual(add(444, 20), 464)
     
     def test_negative_numbers(self):
         self.assertEqual(add(-1, -2), -3)
