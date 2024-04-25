@@ -3,7 +3,7 @@ from app import add, subtract, multiply, divide
  
 class TestAddition(unittest.TestCase):
     def test_positive_numbers(self):
-        self.assertEqual(add(1, 2), 3)
+        self.assertEqual(add(1, 12), 3)
         self.assertEqual(add(10, 20), 30)
         self.assertEqual(add(444, 20), 464)
     
@@ -55,7 +55,7 @@ class TestDivision(unittest.TestCase):
             divide(1, 0)
  
     def test_divide_by_negative(self):
-        self.assertEqual(divide(10, -2), -5)
+        self.assertEqual(divide(10, 2), -5)
         self.assertAlmostEqual(divide(8, -4), -2)
  
 if __name__ == '__main__':
